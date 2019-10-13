@@ -1,0 +1,23 @@
+{
+  "name": "talk-2019-whatshot-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "target": "es2015",
+  "allowJs": true,
+  "module": "es6",
+  "moduleResolution": "node",
+  "dependencies": {
+    "@types/ramda": "^0.26.29",
+    "@types/react": "^16.9.5",
+    "ramda": "^0.26.1",
+    "react": "^16.10.2",
+    "rxjs": "^6.5.3",
+    "typescript": "^3.3.3"
+  }
+}

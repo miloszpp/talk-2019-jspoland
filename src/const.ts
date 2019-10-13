@@ -24,3 +24,8 @@ const product = {
 };
 
 product.categories.push("abc");
+
+const fetchArticle = (id: string) => ({
+  type: "@@action/fetchArticle",
+  payload: { id }
+});

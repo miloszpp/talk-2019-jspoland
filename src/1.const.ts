@@ -1,5 +1,16 @@
 export default {};
 
+interface Person {
+  name: string;
+  address?: {
+    city: string;
+    country?: {
+      name: string;
+      code?: string;
+    };
+  };
+}
+
 type State = {
   isFetching: boolean;
   data?: Person[];
@@ -21,7 +32,7 @@ const reducer = (state: State, action: Action): State => {
       return { isFetching: true };
     case "success":
       return { ...state, data: action.payload.data, isFetching: false };
-    // case "failure":
-    //   return { ...state, isFetching: false };
+    case "failure":
+      return { ...state, isFetching: false };
   }
 };

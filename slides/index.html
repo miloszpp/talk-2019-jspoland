@@ -116,10 +116,6 @@ class: center, middle, inverse
 ---
 class: center, middle
 
-# Why so many features?
----
-class: center, middle
-
 # Why bother?
 ---
 # Uncanny valley of TypeScript
@@ -187,7 +183,7 @@ person: {
 const person = {
   name: "John",
   age: 44
-} as const;
+*} as const;
 ```
 ]
 .column[
@@ -210,7 +206,7 @@ class: center, middle, inverse
 # Default value pattern
 
 ```
-interface User {
+interface Employee {
   name: string;
   position: string;
   childrenCount?: number;
@@ -218,7 +214,7 @@ interface User {
 ```
 --
 ```
-function renderUser({ name, position, childrenCount }: User) {
+function render({ name, position, childrenCount }: Employee) {
   return `
     <h1>${name}</h1>
     <dl>
@@ -312,7 +308,7 @@ interface Person {
 pipe(
   flatMap(address => address.country),
   flatMap(country => country.code),
-  map(toUpperCase)
+* map(toUpperCase)
 );
 ```
 ---
@@ -330,7 +326,7 @@ interface Article {
 ```
 --
 ```
-function assertArticle(obj: any): asserts obj is Article {
+*function assertArticle(obj: any): asserts obj is Article {
   if (!('title' in obj && 'content' in obj)) {
     throw new Error('This is not an article');
   }
@@ -439,8 +435,11 @@ TypeScript 3.4:
 mapToNames: <V>(array: Record<"name", V>[]) => V[]
 ```
 ---
-# TypeScript playground
+# Keeping up with TypeScript
 <img class="center middle" src="images/playground.png" width="100%" />
+---
+# The future
+TODO
 ---
 class: center, middle, inverse
 # Thank you!

@@ -1,3 +1,18 @@
+interface Person {
+  name: string;
+  address?: {
+    city: string;
+    country?: {
+      name: string;
+      code?: string;
+    };
+  };
+}
+
+declare const person: Person;
+
+const code = get(person, ["address", "country", "code"]);
+
 // This is a type safe implementation of `get` util. Please use it instead of `get` from `lodash`.
 // Please see tests for usage examples.
 

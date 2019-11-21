@@ -324,7 +324,15 @@ interface Article {
   content: string;
 }
 ```
---
+```
+fetch('http://localhost/articles/1')
+  .then((response) => response.json())
+  .then((body) => {
+*   return (body as Article).title;
+  });
+```
+---
+# Runtime type checking with assertion
 ```
 *function assertArticle(obj: any): asserts obj is Article {
   if (!('title' in obj && 'content' in obj)) {
@@ -332,7 +340,6 @@ interface Article {
   }
 }
 ```
---
 ```
 fetch('http://localhost/articles/1')
   .then((response) => response.json())
@@ -439,7 +446,11 @@ class: center, middle, inverse
 # Wrapping up...
 ---
 # Keeping up with TypeScript
+.center[
 <img class="center middle" src="images/playground.png" width="100%" />
+
+[http://typescriptlang.org/play/](http://typescriptlang.org/play/)
+]
 ---
 class: center, middle, inverse
 # Thank you!
